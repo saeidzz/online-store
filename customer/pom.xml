@@ -12,5 +12,18 @@
 
     <artifactId>customer</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>ir.rabbit.group</groupId>
+            <artifactId>product</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ir.rabbit.group</groupId>
+            <artifactId>shopping</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

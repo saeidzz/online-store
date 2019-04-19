@@ -1,0 +1,89 @@
+
+entity User {
+ firstName String;
+ lastName String;
+ email String;
+ phone String;
+ mobile String;
+ address String;
+ city Object;
+ address Object;
+ shippingAddress List<Object> ;
+ role Object;
+}
+
+entity Role {
+ name String;
+ user Object;
+ authorities List<Object>;
+}
+
+entity Authority {
+ role Object;
+ name String;
+}
+
+entity WishList {
+ user Object;
+ products List<Object>;
+}
+
+entity Payment {
+ customer Object;
+ orders List<Product>;
+ amount Long;
+ success Boolean;
+ type Object;
+}
+
+entity PaymentType{
+ name String;
+
+}
+
+entity Customer {
+ user Object;
+ wishList Object;
+ shoppingCart Object;
+ order List<Object> ;
+
+}
+
+entity ShoppingCart {
+  shoppingCartHasProducts List<Object>;
+  customer Object;
+
+}
+
+entity WishListHasProduct {
+  wishList Object;
+  product Object;
+}
+
+entity ShoppingCartHasProduct {
+  shoppingCart Object;
+  product Object;
+}
+
+entity Order{
+ customer Object;
+ products List<Object>;
+ payment Object;
+}
+
+entity Product{
+ wishListHasProducts List<Object>;
+ shoppingCartHasProducts List<Object>;
+ categoryHasProduct List<Object>;
+ orders List<Object>;
+}
+
+entity Category{
+ name String;
+ subCategories List<object>
+ categoryHasProducts List<Object>;
+}
+entity CategoryHasProduct{
+  product Object;
+  category Object;
+}

@@ -11,6 +11,8 @@
         <module>product</module>
         <module>customer-api</module>
         <module>product-api</module>
+        <module>shopping</module>
+        <module>shopping-api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
